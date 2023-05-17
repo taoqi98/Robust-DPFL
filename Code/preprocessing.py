@@ -9,11 +9,11 @@ import json
 
 def load_mnist_data(mode):
     if mode == 'train':
-        file_path = '/data/qit16/MINIST//train-images.idx3-ubyte'
-        label_path = '/data/qit16/MINIST//train-labels.idx1-ubyte'
+        file_path = 'MINIST//train-images.idx3-ubyte'
+        label_path = 'MINIST//train-labels.idx1-ubyte'
     else:
-        file_path = '/data/qit16/MINIST//t10k-images.idx3-ubyte'
-        label_path = '/data/qit16/MINIST//t10k-labels.idx1-ubyte'
+        file_path = 'MINIST//t10k-images.idx3-ubyte'
+        label_path = 'MINIST//t10k-labels.idx1-ubyte'
         
     binfile = open(file_path, 'rb') 
     buffers = binfile.read()
@@ -57,7 +57,7 @@ def load_femnist_data():
     return train_images, train_labels, test_images, test_labels
 
 
-def load_cifar10_data(path='/data/qit16/CIFAR10'):
+def load_cifar10_data(path='CIFAR10'):
     
     train_data = []
     train_label = []
