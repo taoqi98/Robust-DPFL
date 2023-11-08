@@ -1,3 +1,6 @@
 sklearn
 tensorflow-gpu == 1.13.0
 keras == 2.2.4
+numpy
+click
+emnist

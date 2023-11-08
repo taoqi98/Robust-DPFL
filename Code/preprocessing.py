@@ -9,11 +9,11 @@ import json
 
 def load_mnist_data(mode):
     if mode == 'train':
-        file_path = 'MINIST//train-images.idx3-ubyte'
-        label_path = 'MINIST//train-labels.idx1-ubyte'
+        file_path = '../Data/MNIST//train-images.idx3-ubyte'
+        label_path = '../Data/MNIST//train-labels.idx1-ubyte'
     else:
-        file_path = 'MINIST//t10k-images.idx3-ubyte'
-        label_path = 'MINIST//t10k-labels.idx1-ubyte'
+        file_path = '../Data/MNIST//t10k-images.idx3-ubyte'
+        label_path = '../Data/MNIST//t10k-labels.idx1-ubyte'
         
     binfile = open(file_path, 'rb') 
     buffers = binfile.read()
@@ -57,7 +57,7 @@ def load_femnist_data():
     return train_images, train_labels, test_images, test_labels
 
 
-def load_cifar10_data(path='CIFAR10'):
+def load_cifar10_data(path='../Data/CIFAR10'):
     
     train_data = []
     train_label = []
@@ -117,6 +117,6 @@ def client_partation(train_labels,range_length = 1000):
 
 def dump_result(Res,dataset,attack_mode,defense_mode,taxic_ratio,alpha,epsilon):
     Key = '-'.join([dataset,attack_mode,defense_mode,str(taxic_ratio),str(alpha),str(epsilon)])
-    with open('result/'+Key+'.json','a') as f:
+    with open('../Result/'+Key+'.json','a') as f:
         s = json.dumps(Res) + '\n'
         f.write(s)

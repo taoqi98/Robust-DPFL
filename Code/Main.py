@@ -15,7 +15,7 @@ import click
 
 @click.command()
 @click.option('-d', '--dataset',default='MNIST')
-@click.option('-a', '--attack-mode', default='V3')
+@click.option('-a', '--attack-mode', default='AttackDPFL')
 @click.option('-m', '--defense-mode', default='RobustDPFL')
 @click.option('-t', '--taxic-ratio', default=0.1)
 @click.option('-o', '--alpha', default=1.2)
